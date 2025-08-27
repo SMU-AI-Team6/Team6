@@ -23,7 +23,7 @@ st.markdown(page_bg, unsafe_allow_html=True)
 
 # .env 파일에서 API 키 불러오기
 load_dotenv()
-google_api_key = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # 이미지 저장 폴더 생성
 if not os.path.exists("img"):
