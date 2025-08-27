@@ -23,7 +23,7 @@ st.markdown(page_bg, unsafe_allow_html=True)
 
 # .env 파일에서 API 키 불러오기
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+google_api_key = os.getenv("OPENAI_API_KEY")
 
 # 이미지 저장 폴더 생성
 if not os.path.exists("img"):
@@ -35,7 +35,7 @@ st.title("🍽️입맛 기반 음식 추천 시스템")
 st.write("입맛과 원하는 나라를 입력하면 음식과 이미지를 추천해드립니다.")
 
 # 사용자 입력
-user_input = st.text_area("입맛을 입력하세요", placeholder="예: 얼큰한 국물이 땡긴다")
+user_input = st.text_area("입맛을 입력하세요", placeholder="예: 매콤한 국물 추천해 줘 ")
 country = st.selectbox("원하는 나라를 선택하세요", ["한국", "일본", "이탈리아", "중국", "인도", "미국", "멕시코"])
 image_name = st.text_input("저장할 이미지 파일 이름", placeholder="예: spicy_soup")
 num_images = st.number_input("생성할 이미지 개수", min_value=1, max_value=5, step=1)
