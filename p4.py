@@ -54,10 +54,19 @@ if st.button("음식 추천 & 이미지 생성"):
                 st.error(f"음식 추천 실패: {e}")
                 st.stop()
 
-            # Step 2: 이미지 생성
-            for i in range(num_images):
-                image_prompt = f"A delicious {country} dish called {food_name}, high-quality, realistic, professional food photography"
+            # Step 2: 음식 이미지 생성 프롬프트
+            # 음식에 대한 구체적인 프롬프트 작성 (기존 이미지 생성 방식을 더 구체화)
+            image_prompt = f"""
+            A high-quality, realistic image of a traditional {country} dish called {food_name}. 
+            The dish should feature the signature elements of spicy, stir-fried noodles with a rich, red sauce. 
+            The noodles should be thick, slightly wavy, and coated with a vibrant red sauce. 
+            Include common ingredients like a fried egg on top, sliced green onions, and sesame seeds. 
+            The image should focus on the texture of the noodles, the creamy, runny yolk of the egg, and the glossy sheen of the spicy sauce. 
+            The food should look appetizing, with a professional food photography style that emphasizes its vibrant colors and delicious appeal.
+            """
 
+            # 이미지 생성
+            for i in range(num_images):
                 try:
                     img_response = openai.Image.create(
                         prompt=image_prompt,
