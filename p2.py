@@ -4,6 +4,21 @@ import openai
 from PIL import Image
 import base64
 from dotenv import load_dotenv
+page_bg = """
+<style>
+    [data-testid="stAppViewContainer"] {
+        background-color: #FFF7E6; /* 배경 색 (연한 크림색) */
+    }
+    [data-testid="stHeader"] {
+        background-color: rgba(0,0,0,0); /* 헤더 투명하게 */
+    }
+    [data-testid="stSidebar"] {
+        background-color: #FFE4B5; /* 사이드바 배경 (모카색) */
+    }
+</style>
+"""
+
+st.markdown(page_bg, unsafe_allow_html=True)
 
 # .env 파일에서 OpenAI API 키 불러오기
 load_dotenv()

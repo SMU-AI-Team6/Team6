@@ -1,4 +1,19 @@
 import streamlit as st
+page_bg = """
+<style>
+    [data-testid="stAppViewContainer"] {
+        background-color: #FFF7E6; /* 배경 색 (연한 크림색) */
+    }
+    [data-testid="stHeader"] {
+        background-color: rgba(0,0,0,0); /* 헤더 투명하게 */
+    }
+    [data-testid="stSidebar"] {
+        background-color: #FFE4B5; /* 사이드바 배경 (모카색) */
+    }
+</style>
+"""
+
+st.markdown(page_bg, unsafe_allow_html=True)
 
 # 페이지 기본 설정
 st.set_page_config(page_title="다문화 레시피 변환 AI", page_icon="🍲", layout="wide")

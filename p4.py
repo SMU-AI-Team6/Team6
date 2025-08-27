@@ -5,6 +5,21 @@ from PIL import Image
 from io import BytesIO
 import os
 from dotenv import load_dotenv
+page_bg = """
+<style>
+    [data-testid="stAppViewContainer"] {
+        background-color: #FFF7E6; /* 배경 색 (연한 크림색) */
+    }
+    [data-testid="stHeader"] {
+        background-color: rgba(0,0,0,0); /* 헤더 투명하게 */
+    }
+    [data-testid="stSidebar"] {
+        background-color: #FFE4B5; /* 사이드바 배경 (모카색) */
+    }
+</style>
+"""
+
+st.markdown(page_bg, unsafe_allow_html=True)
 
 # .env 파일에서 API 키 불러오기
 load_dotenv()
@@ -15,8 +30,8 @@ if not os.path.exists("img"):
     os.makedirs("img")
 
 # 페이지 제목 및 설명
-st.sidebar.markdown("🍽️ 음식 추천 및 이미지 생성")
-st.title("입맛 기반 음식 추천 시스템 🍽️")
+st.sidebar.markdown("🍜음식 추천 및 이미지 생성")
+st.title("🍽️입맛 기반 음식 추천 시스템")
 st.write("입맛과 원하는 나라를 입력하면 음식과 이미지를 추천해드립니다.")
 
 # 사용자 입력

@@ -2,13 +2,28 @@ import streamlit as st
 import textwrap
 
 from MyLLM import geminiModel
+page_bg = """
+<style>
+    [data-testid="stAppViewContainer"] {
+        background-color: #FFF7E6; /* 배경 색 (연한 크림색) */
+    }
+    [data-testid="stHeader"] {
+        background-color: rgba(0,0,0,0); /* 헤더 투명하게 */
+    }
+    [data-testid="stSidebar"] {
+        background-color: #FFE4B5; /* 사이드바 배경 (모카색) */
+    }
+</style>
+"""
+
+st.markdown(page_bg, unsafe_allow_html=True)
 
 st.set_page_config(page_title="맛집 추천 AI", page_icon="🍽️", layout="wide")
 
-st.sidebar.markdown("🍽️ 맛집 추천 AI")
+st.sidebar.markdown("🍳 맛집 추천 AI")
 
 # 페이지 제목
-st.title("지역 기반 맛집 추천 AI")
+st.title("🍽️지역 기반 맛집 추천 AI")
 st.write("추천받을 지역을 입력하면 5가지 카테고리별 맛집을 추천해드립니다!")
 
 # 지역 입력
