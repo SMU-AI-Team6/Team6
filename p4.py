@@ -15,7 +15,7 @@ if not os.path.exists("img"):
     os.makedirs("img")
 
 # 페이지 제목 및 설명
-st.sidebar.markdown("🍽️ Page 4: 음식 추천 및 이미지 생성")
+st.sidebar.markdown("🍽️ 음식 추천 및 이미지 생성")
 st.title("입맛 기반 음식 추천 시스템 🍽️")
 st.write("입맛과 원하는 나라를 입력하면 음식과 이미지를 추천해드립니다.")
 
