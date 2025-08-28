@@ -1,14 +1,12 @@
 # 🍲 다문화 레시피 변환 AI 
 
-**사용자 맞춤형 다문화 레시피 변환을 통해 음식으로 문화 교류 촉진**
-
 ---
 
 ## 📋 프로젝트 개요
 
 앱 전체 Home 화면 예시  
-![앱 메인 화면](Image/Home.png)
-AI 기술을 심플한 UI와 통합하여 개인 건강관리와 의료 정보 접근성을 높인 종합 서비스입니다.  
+<img width="1533" height="859" alt="image" src="https://github.com/user-attachments/assets/64dcf2fa-e75c-492b-914d-9d5369f7113f" />
+사용자 맞춤형 다문화 레시피 변환을 통해 음식으로 문화 교류 촉진  
 - **Streamlit** 프레임워크로 개발된 직관적 웹 환경
 - *응급상황 대처/자가진단 챗봇* 및 *정신건강/마음챙김 챗봇* 등 다양한 AI 챗봇 서비스  
 - OpenAI LLM과 gTTS(TTS)로 시각·청각 정보를 동시에 제공  
@@ -57,7 +55,7 @@ AI 기술을 심플한 UI와 통합하여 개인 건강관리와 의료 정보 �
 ---
 
 
-<img width="1533" height="859" alt="image" src="https://github.com/user-attachments/assets/64dcf2fa-e75c-492b-914d-9d5369f7113f" />
+
 <img width="1856" height="789" alt="image" src="https://github.com/user-attachments/assets/3fe3acff-ebaf-4d64-b913-349832d943a7" />
 <img width="1828" height="684" alt="image" src="https://github.com/user-attachments/assets/b978b074-7696-431c-bbf0-e6497e7f94cc" />
 <img width="1543" height="772" alt="image" src="https://github.com/user-attachments/assets/c457c342-8698-4f90-9ae9-7ce4852243ca" />
