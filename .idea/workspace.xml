@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9889bc76-add8-41ac-a0cc-1cd1172f3629" name="Changes" comment="0827">
-      <change afterPath="$PROJECT_DIR$/p5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLCH.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLCH.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLLM.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLLM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/p2.py" beforeDir="false" afterPath="$PROJECT_DIR$/p2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756341055813</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="0827">
+      <option name="closed" value="true" />
+      <created>1756343992017</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1756343992017</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
