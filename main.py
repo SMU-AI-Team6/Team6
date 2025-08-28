@@ -39,8 +39,15 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# 이미지나 배너
-st.image("https://images.unsplash.com/photo-1600891964599-f61ba0e24092", use_container_width=True)
+# 이미지 (HTML로 가운데 정렬, 너비 700px)
+st.markdown(
+    """
+    <div style='text-align: center;'>
+        <img src='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' width='1300px'>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # 2열 레이아웃
 col1, col2 = st.columns(2)
