@@ -90,8 +90,7 @@ def makeAudio(text, name):
         response_format="mp3",
         speed=1.2,
     )
-    response.stream_to_file("audio/"+name)
-
+    response.stream_to_file("audio/" + name)
 
 def encode_image(image_path):
     with open(image_path, "rb") as image_file:

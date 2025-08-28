@@ -1,41 +1,24 @@
-import time
-
-from PyPDF2 import PdfReader
-from langchain.chains.conversational_retrieval.base import ConversationalRetrievalChain
-from langchain.memory import ConversationBufferWindowMemory
-from langchain_community.chat_models import ChatOpenAI
-from langchain_community.embeddings import OpenAIEmbeddings
-from langchain_community.vectorstores import FAISS
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_text_splitters import CharacterTextSplitter, RecursiveCharacterTextSplitter
-from openai import OpenAI
-import google.generativeai as genai
-from dotenv import load_dotenv
-import os
 import streamlit as st
+from langchain.agents import initialize_agent, AgentType
+from langchain_community.agent_toolkits.load_tools import load_tools
+import os
+import time
+from openai import OpenAI
+from langchain_community.chat_models import ChatOpenAI
+from dotenv import load_dotenv
+
+from p4 import client
 
 load_dotenv()
-
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-GOOGLE_API_KEY=os.getenv("GOOGLE_API_KEY")
 
-# OpenAI LLM Model
+# OpenAI LLM
 def getOpenAI():
     llm = ChatOpenAI(temperature=0, model_name='gpt-4o')
     return llm
 
-# Gemini LLM Model
-def getGenAI():
-    llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash",
-        temperature=0,
-        max_output_tokens=200,
-        google_api_key=GOOGLE_API_KEY
-    )
-    return llm
-
+# Progress Bar
 def progressBar(txt):
-    # Progress Bar Start -----------------------------------------
     progress_text = txt
     my_bar = st.progress(0, text=progress_text)
     for percent_complete in range(100):
@@ -43,82 +26,85 @@ def progressBar(txt):
         my_bar.progress(percent_complete + 1, text=progress_text)
     time.sleep(1)
     return my_bar
-    # Progress Bar End -----------------------------------------
 
+# TTS 생성
 def openAiModel():
     client = OpenAI(api_key=OPENAI_API_KEY)
     return client
-def makeAudio(text, name):
-    if not os.path.exists("audio"):
-        os.makedirs("audio")
-    model = openAiModel()
-    response = model.audio.speech.create(
+
+def makeAudio(text, path):
+    # path: 최종 파일 경로 (ex: "audio/temp.mp3")
+    path = "audio/temp.mp3"
+    folder = os.path.dirname(path)
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+
+    response = client.audio.speech.create(
         model="tts-1",
         input=text,
-        #["alloy", "echo", "fable", "onyx", "nova", "shimmer"],
         voice="echo",
         response_format="mp3",
         speed=1.2,
     )
-    response.stream_to_file("audio/"+name)
-
-def getOpenAIEmbeddings():
-    embeddings = OpenAIEmbeddings(model="text-embedding-ada-002", api_key=OPENAI_API_KEY)
-    return embeddings
-def process_text(text):
-    text_splitter = CharacterTextSplitter(
-        separator="\n",
-        chunk_size=1000,
-        chunk_overlap=200,
-        length_function=len
-    )
-    chunks = text_splitter.split_text(text)
-
-    #임베딩 처리(벡터 변환), 임베딩은 OpenAI 모델을 사용합니다.
-    embeddings = getOpenAIEmbeddings()
-    documents = FAISS.from_texts(chunks, embeddings)
-    return documents
+    response.stream_to_file(path)
 
 
+# --------------------------
+# 페이지 제목 및 사이드바
+# --------------------------
+st.markdown("## 🍲 나라별 음식문화 Q&A")
+st.sidebar.markdown("### 🌏 음식문화 질의응답")
 
-#PDF 문서에서 텍스트를 추출
-def get_pdf_text(pdf_docs):
-    text = ""
-    for pdf in pdf_docs:
-        pdf_reader = PdfReader(pdf)
-        for page in pdf_reader.pages:
-            text += page.extract_text()
-    return text
+# --------------------------
+# 사용자 입력
+# --------------------------
+country = st.selectbox(
+    "질문할 나라를 선택하세요",
+    ["한국", "일본", "중국", "인도", "이탈리아", "미국", "멕시코", "프랑스", "태국"],
+    key="country_select"
+)
 
-#지정된 조건에 따라 주어진 텍스트를 더 작은 덩어리로 분할
-def get_text_chunks(text):
-    text_splitter = RecursiveCharacterTextSplitter(
-        separators="\\n",
-        chunk_size=1000,
-        chunk_overlap=200,
-        length_function=len
-    )
-    chunks = text_splitter.split_text(text)
-    return chunks
+text = st.text_area(
+    label="질문 입력:",
+    placeholder=f"{country}의 전통 음식이나 음식문화를 물어보세요.",
+    key="question_input"
+)
 
-#주어진 텍스트 청크에 대한 임베딩을 생성하고 FAISS를 사용하여 벡터 저장소를 생성
-def get_vectorstore(text_chunks):
-    embeddings = getOpenAIEmbeddings()
-    vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
-    return vectorstore
+# --------------------------
+# SEND 버튼 클릭 시
+# --------------------------
+if st.button("SEND", key="send_button"):
+    if text:
+        st.info(f"질문: {text}")
 
+        # 입력한 질문 음성 변환
+        makeAudio(text, "temp.mp3")
+        st.audio("audio/temp.mp3", autoplay=True, format="audio/mp3", key="audio_input")
 
-#주어진 벡터 저장소로 대화 체인을 초기화
-def get_conversation_chain(vectorstore):
-    memory = ConversationBufferWindowMemory(memory_key='chat_history', return_message=True)  #ConversationBufferWindowMemory에 이전 대화 저장
-    conversation_chain = ConversationalRetrievalChain.from_llm(
-        llm=getOpenAI(),
-        retriever=vectorstore.as_retriever(),
-        get_chat_history=lambda h: h,
-        memory=memory
-    ) #ConversationalRetrievalChain을 통해 langchain 챗봇에 쿼리 전송
-    return conversation_chain
-def split_docs(documents,chunk_size=1000,chunk_overlap=20):
-  text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
-  docs = text_splitter.split_documents(documents)
-  return docs
+        # OpenAI LLM과 도구 초기화
+        openllm = getOpenAI()
+        tools = load_tools(['wikipedia'], llm=openllm)
+        agent = initialize_agent(
+            tools,
+            openllm,
+            agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+            verbose=False,
+            handle_parsing_errors=True
+        )
+
+        # 진행 표시
+        my_bar = progressBar("답변 생성 중...")
+
+        # 질문 실행
+        result = agent.run(text)
+
+        # 결과 표시 및 음성 변환
+        st.subheader("💬 답변")
+        st.info(result)
+        makeAudio(result, "result.mp3")
+        st.audio("audio/result.mp3", autoplay=True, format="audio/mp3", key="audio_result")
+
+        # 진행바 제거
+        my_bar.empty()
+    else:
+        st.warning("질문을 입력해주세요.", key="warning_no_text")
