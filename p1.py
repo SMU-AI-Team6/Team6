@@ -1,13 +1,15 @@
 import streamlit as st
+from langchain.adapters import openai
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
 
+from MyLCH import OPENAI_API_KEY
 from MyLLM import openAiModel, makeMsg, openAiModelArg
 
-# 환경 변수 로드
+# .env 파일에서 API 키 불러오기
 load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+openai.api_key= os.getenv("OPENAI_API_KEY")
 
 
 page_bg = """

@@ -4,6 +4,8 @@ import openai
 from PIL import Image
 import base64
 from dotenv import load_dotenv
+
+# 페이지 스타일 설정
 page_bg = """
 <style>
     [data-testid="stAppViewContainer"] {
@@ -50,15 +52,17 @@ if uploaded_img is not None:
        - 원래 음식의 특징을 유지하면서 한국적인 맛을 살리기
     """
 
-    # OpenAI 모델 호출
+    # OpenAI 모델 호출 (ChatCompletion 사용)
     try:
-        response = openai.Completion.create(
+        response = openai.ChatCompletion.create(
             model="gpt-4",   # 텍스트 기반 모델을 사용합니다.
-            prompt=prompt,
+            messages=[
+                {"role": "user", "content": prompt}
+            ],
             max_tokens=700
         )
 
-        result = response.choices[0].text.strip()
+        result = response['choices'][0]['message']['content'].strip()
 
         # 결과 출력
         st.subheader("📖 변환 결과")

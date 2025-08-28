@@ -5,6 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9889bc76-add8-41ac-a0cc-1cd1172f3629" name="Changes" comment="0827">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Team6.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Team6.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyLLM.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLLM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/p1.py" beforeDir="false" afterPath="$PROJECT_DIR$/p1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/p2.py" beforeDir="false" afterPath="$PROJECT_DIR$/p2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/p3.py" beforeDir="false" afterPath="$PROJECT_DIR$/p3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/p4.py" beforeDir="false" afterPath="$PROJECT_DIR$/p4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
