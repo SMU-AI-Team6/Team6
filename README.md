@@ -16,7 +16,7 @@
 ---
 
 ## 🎯 주요 기능
-### 🍽️ 음식 영양 분석
+### 🧀 음식 영양 분석
 - **음식 영양 분석:** 사진 업로드, 영양성분 안내, 개인 건강 조언  
 - 영양 분석 메인 화면  
   ![영양 분석 메인](Image/NutritionalAnalysis_Main.png)
@@ -24,14 +24,14 @@
   ![건강한 경우](Image/NutritionalAnalysis_Display2.png)
   ![문제가 있을 경우](Image/NutritionalAnalysis_Display3.png)
 
-### 💪 인바디 결과 분석
+### 🧀 인바디 결과 분석
 - **인바디 결과 분석:** PDF 업로드, 체성분 분석, 맞춤 운동·식단 추천 
 - 인바디 메인 화면  
   ![인바디 메인](Image/Inbody_Main.png)
 - 인바디 결과 예시  
   ![인바디 결과](Image/Inbody_display.png)
 
-### 🩺 피부암 진단 보조
+### 🧀 피부암 진단 보조
 - **피부암 진단 보조:** 이미지 업로드, AI 판단·상담 
 - 진단 메인 화면  
   ![피부암 진단 메인](Image/SkincancerDiagnosis_main.png)
@@ -39,14 +39,14 @@
   ![양성비율이 큰 경우](Image/SkincancerDiagnosis_Display.png)
   ![악성비율이 큰 경우](Image/SkincancerDiagnosis_Display2.png)
 
-### 🚑 응급 상황 챗봇
+### 🧀 응급 상황 챗봇
 - **응급 상황 챗봇:** 실시간 증상 입력, 행동 지침/병원 안내 
 - 응급 챗봇 메인 화면  
   ![응급 챗봇 메인](Image/EmergencyChatbot_Main.png)
 - 챗봇 대화 예시  
   ![응급 챗봇 대화](Image/EmergencyChatbot_Display.png)
 
-### 🧠 정신건강/마음챙김 챗봇
+### 🧀 정신건강/마음챙김 챗봇
 - **정신건강/마음챙김 챗봇:** 고민·스트레스 대화, 위로 메시지, TTS 음성 변환
 - 정신건강 챗봇 메인 화면  
   ![정신건강 챗봇 메인](Image/MentalHealthChatbot_Main.png)
