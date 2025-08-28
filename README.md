@@ -16,49 +16,29 @@
 ---
 
 ## 🎯 주요 기능
-### 🧀 나라별 레시피 추천천
-- **음식 영양 분석:** 사진 업로드, 영양성분 안내, 개인 건강 조언  
-- 영양 분석 메인 화면  
+### 🧀 나라별 레시피 추천
+- 입력한 재료와 나라를 기반으로 만들 수 있는 요리 추천 후 레시피 추천
+- 나라별 레시피 추천 메인 화면  
  <img width="1856" height="789" alt="image" src="https://github.com/user-attachments/assets/3fe3acff-ebaf-4d64-b913-349832d943a7" />
-- 분석 결과 화면  
-  ![건강한 경우](Image/NutritionalAnalysis_Display2.png)
-  ![문제가 있을 경우](Image/NutritionalAnalysis_Display3.png)
 
-### 🧀 인바디 결과 분석
-- **인바디 결과 분석:** PDF 업로드, 체성분 분석, 맞춤 운동·식단 추천 
-- 인바디 메인 화면  
-  ![인바디 메인](Image/Inbody_Main.png)
-- 인바디 결과 예시  
-  ![인바디 결과](Image/Inbody_display.png)
+### 🧀 한국식 레시피 변환
+- 외국 음식 사진 업로드 후 한국식 레시피로 변환
+- 한국식 레시피 변환 메인 화면  
+  <img width="1828" height="684" alt="image" src="https://github.com/user-attachments/assets/b978b074-7696-431c-bbf0-e6497e7f94cc" />
+  
+### 🧀 지역 기반 맛집 추천 AI
+- 추천 지역을 입력하면 5가지 카테고리별 맛집 추천
+- 지역 기반 맛집 추천 메인 화면  
+  <img width="1543" height="772" alt="image" src="https://github.com/user-attachments/assets/c457c342-8698-4f90-9ae9-7ce4852243ca" />
 
-### 🧀 피부암 진단 보조
-- **피부암 진단 보조:** 이미지 업로드, AI 판단·상담 
-- 진단 메인 화면  
-  ![피부암 진단 메인](Image/SkincancerDiagnosis_main.png)
-- 피부 사진 업로드 및 AI 분석  
-  ![양성비율이 큰 경우](Image/SkincancerDiagnosis_Display.png)
-  ![악성비율이 큰 경우](Image/SkincancerDiagnosis_Display2.png)
+### 🧀 입맛 기반 음식 추천 시스템
+- 입맛과 원하는 나를 입력하면 음식과 이미지 추천 
+- 입맛 기반 음식 추천 메인 화면
+  <img width="1852" height="787" alt="image" src="https://github.com/user-attachments/assets/581010b9-5f23-47c9-952a-85896cc79f67" />
 
-### 🧀 응급 상황 챗봇
-- **응급 상황 챗봇:** 실시간 증상 입력, 행동 지침/병원 안내 
-- 응급 챗봇 메인 화면  
-  ![응급 챗봇 메인](Image/EmergencyChatbot_Main.png)
-- 챗봇 대화 예시  
-  ![응급 챗봇 대화](Image/EmergencyChatbot_Display.png)
-
-### 🧀 정신건강/마음챙김 챗봇
-- **정신건강/마음챙김 챗봇:** 고민·스트레스 대화, 위로 메시지, TTS 음성 변환
-- 정신건강 챗봇 메인 화면  
-  ![정신건강 챗봇 메인](Image/MentalHealthChatbot_Main.png)
-- 대화·TTS 결과 예시  
-  ![정신건강 챗봇 대화](Image/MentalHealthChatbot_Display.png)
-
+### 🧀 AI와 함꼐하는 음식 문화 탐방
+- 나라를 입력하면 챗봇이 세계 각국의 음식 문화와 예절 소개
+- AI와 함꼐하는 음식 문화 탐방 메인 화면  
+  <img width="1873" height="856" alt="image" src="https://github.com/user-attachments/assets/2ec13e77-120a-4a1e-adfa-b978722808ee" />
+  
 ---
-
-
-
-
-<img width="1828" height="684" alt="image" src="https://github.com/user-attachments/assets/b978b074-7696-431c-bbf0-e6497e7f94cc" />
-<img width="1543" height="772" alt="image" src="https://github.com/user-attachments/assets/c457c342-8698-4f90-9ae9-7ce4852243ca" />
-<img width="1852" height="787" alt="image" src="https://github.com/user-attachments/assets/581010b9-5f23-47c9-952a-85896cc79f67" />
-<img width="1873" height="856" alt="image" src="https://github.com/user-attachments/assets/2ec13e77-120a-4a1e-adfa-b978722808ee" />
