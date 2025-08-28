@@ -21,7 +21,7 @@ page_bg = """
 
 st.markdown(page_bg, unsafe_allow_html=True)
 
-st.title("🍽️ 나라별 음식 문화 탐방")
+st.title("💬 AI와 함께하는 음식 문화 탐방")
 st.sidebar.markdown("✈️ 나라별 음식 문화 및 예절")
 
 # 메모리 초기화

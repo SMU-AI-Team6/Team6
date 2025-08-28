@@ -23,7 +23,7 @@ st.set_page_config(page_title="맛집 추천 AI", page_icon="🍽️", layout="w
 st.sidebar.markdown("🍳 맛집 추천 AI")
 
 # 페이지 제목
-st.title("🍽️지역 기반 맛집 추천 AI")
+st.title("🔍 지역 기반 맛집 추천 AI")
 st.write("추천받을 지역을 입력하면 5가지 카테고리별 맛집을 추천해드립니다!")
 
 # 지역 입력
