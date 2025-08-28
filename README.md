@@ -77,6 +77,20 @@
 - **Streamlit Cloud/로컬 실행**: 빠른 배포·테스트 환경
 - **README.md/사용자 설명서**: 기능, 사용법, 기술 스택 문서화
 
+## 💡 사용 방법
+
+1. 프로젝트 폴더에서 아래 명령어로 필수 패키지를 설치합니다.
+- `pip install -r requirements.txt`
+
+2. `.streamlit/secrets.toml` 파일에 본인의 OpenAI API 키를 입력합니다.
+- OPENAI_API_KEY = “sk-…”
+
+3. 프로젝트 루트에서 Streamlit 앱을 실행합니다.
+- `streamlit run app.py`
+
+4. 웹 브라우저에서 [http://localhost:8501](http://localhost:8501/)로 접속하여
+음식 추천, 레시피 추천 등 다양한 기능을 직접 사용할 수 있습니다.
+
 ## 👨‍💻 개발자 소개
 
 - 그린화학공학과 202321611 임예원
