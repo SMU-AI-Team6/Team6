@@ -16,10 +16,10 @@
 ---
 
 ## 🎯 주요 기능
-### 🧀 음식 영양 분석
+### 🧀 나라별 레시피 추천천
 - **음식 영양 분석:** 사진 업로드, 영양성분 안내, 개인 건강 조언  
 - 영양 분석 메인 화면  
-  ![영양 분석 메인](Image/NutritionalAnalysis_Main.png)
+ <img width="1856" height="789" alt="image" src="https://github.com/user-attachments/assets/3fe3acff-ebaf-4d64-b913-349832d943a7" />
 - 분석 결과 화면  
   ![건강한 경우](Image/NutritionalAnalysis_Display2.png)
   ![문제가 있을 경우](Image/NutritionalAnalysis_Display3.png)
@@ -57,7 +57,7 @@
 
 
 
-<img width="1856" height="789" alt="image" src="https://github.com/user-attachments/assets/3fe3acff-ebaf-4d64-b913-349832d943a7" />
+
 <img width="1828" height="684" alt="image" src="https://github.com/user-attachments/assets/b978b074-7696-431c-bbf0-e6497e7f94cc" />
 <img width="1543" height="772" alt="image" src="https://github.com/user-attachments/assets/c457c342-8698-4f90-9ae9-7ce4852243ca" />
 <img width="1852" height="787" alt="image" src="https://github.com/user-attachments/assets/581010b9-5f23-47c9-952a-85896cc79f67" />
